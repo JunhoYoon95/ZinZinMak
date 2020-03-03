@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "66669824053",
+    "firebase_url": "https://junhodiary-25751.firebaseio.com",
+    "project_id": "junhodiary-25751",
+    "storage_bucket": "junhodiary-25751.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66669824053:android:b2a932e69bc6c5fd3b097c",
+        "android_client_info": {
+          "package_name": "com.junho.zinzinmak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "66669824053-nar2uv04jkvtjb8fgqs637ieilh2rj3t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.junho.zinzinmak",
+            "certificate_hash": "8c3f409569e25b8a52f505cbb613f11a597b9d20"
+          }
+        },
+        {
+          "client_id": "66669824053-ua0q5keivi9v3gtsk49f9bb0417e40on.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmeBAKTsbUgEkULDzqDi5_mn6xAJ2Jiak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "66669824053-ua0q5keivi9v3gtsk49f9bb0417e40on.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
