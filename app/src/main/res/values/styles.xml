@@ -1,8 +1,8 @@
 <resources>
 
-    <!-- Base application theme. -->
+    <!-- 기본 어플 테마 -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        <!--  내맘대로. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>

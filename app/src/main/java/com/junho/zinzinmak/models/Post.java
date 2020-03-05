@@ -18,7 +18,7 @@ public class Post {
     // 본문
     public String body;
     // 좋아요 수
-    public int starCount = 0;
+    public int starCount;
     // 지금 이 좋아요 수가 2 이상으로 증가를 하지 않고 있는 오류가 생김.
     public Map<String, Boolean> stars = new HashMap<>();
 

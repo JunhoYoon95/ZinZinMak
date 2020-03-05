@@ -97,6 +97,7 @@ public abstract class PostListFragment extends Fragment {
                 viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        // 일단 카드뷰로 보여주다가 그 곳을 클릭하면 확대해서 크레 보여주는 그런 방식으로 인텐트를 하라고.
                         // Launch PostDetailActivity
                         Intent intent = new Intent(getActivity(), PostDetailActivity.class);
                         intent.putExtra(PostDetailActivity.EXTRA_POST_KEY, postKey);
@@ -106,6 +107,7 @@ public abstract class PostListFragment extends Fragment {
 
                 // Determine if the current user has liked this post and set UI accordingly
                 if (model.stars.containsKey(mAuth.getCurrentUser().getUid())) {
+                    // 스타 모양 부분으로
                     viewHolder.starView.setImageResource(R.drawable.ic_toggle_star_24);
                 } else {
                     viewHolder.starView.setImageResource(R.drawable.ic_toggle_star_outline_24);
@@ -142,14 +144,16 @@ public abstract class PostListFragment extends Fragment {
 
                 if (p.stars.containsKey(mAuth.getCurrentUser().getUid())) {
                     // 좋아요를 한 거에 대해서 취소를 하는 경우.
-                    // 좋야요 갯수를 하나 빼버리고
-                    p.starCount = p.starCount - 1;
+
                     // 지금 현재 로그인 되어있는 유저 아이디 가져와서 그 사람이 주는 star 지우라고.
                     p.stars.remove(mAuth.getCurrentUser().getUid());
+                    // 좋야요 갯수를 하나 빼버리고
+                    p.starCount--;
                 } else {
-                    // 좋아요 표시하기(자기 자신도 가능하게)
-                    p.starCount = p.starCount + 1;
+
                     p.stars.put(mAuth.getCurrentUser().getUid(), true);
+                    // 좋아요 표시하기(자기 자신도 가능하게)
+                    p.starCount++;
                 }
 
                 // Set value and report transaction success

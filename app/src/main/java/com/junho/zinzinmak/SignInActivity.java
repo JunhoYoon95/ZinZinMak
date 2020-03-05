@@ -30,11 +30,16 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
 
     private DatabaseReference mDatabase;
     private FirebaseAuth mAuth;
-    private FirebaseAuth.AuthStateListener mAuthListenenr; // email login value
+    private FirebaseAuth.AuthStateListener mAuthListenenr;
 
+
+    // 이메일 입력창
     private EditText mEmailField;
+    // 비밀번호 입력창
     private EditText mPasswordField;
+    // 로그인 버튼
     private Button mSignInButton;
+    // 회원가입 버튼
     private Button mSignUpButton;
 
 
@@ -46,14 +51,14 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
         mDatabase = FirebaseDatabase.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
 
-        // Views
+        // OnCreate로 만들어지자마자 이렇게 뷰들을 일단 가져와야지.
         mEmailField = findViewById(R.id.fieldEmail);
         mPasswordField = findViewById(R.id.fieldPassword);
         mSignInButton = findViewById(R.id.buttonSignIn);
         mSignUpButton = findViewById(R.id.buttonSignUp);
         setProgressBar(R.id.progressBar);
 
-        // Click listeners
+        // 클릭을 할 시에 하는 행동(로그인, 회원가입 버튼)
         mSignInButton.setOnClickListener(this);
         mSignUpButton.setOnClickListener(this);
 
@@ -62,8 +67,9 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if (user != null) {
+                    // 시작을 했을 때에 유저가 널이 아니다? 유저가 이미 있다면 그러면 사인인을 했다는 거지. 그러면 메인으로 넘어가라고
                     startActivity(new Intent(SignInActivity.this, MainActivity.class));
-                    finish(); // current activity stop
+                    finish(); // 현재의 액티비티를 중지 시키는 거고.
                     Toast.makeText(SignInActivity.this, "user id: " + mAuth.getCurrentUser().getUid(), Toast.LENGTH_LONG).show();
                 }
             }

@@ -131,8 +131,8 @@ public class NewPostActivity extends BaseActivity {
 
     // [START write_fan_out]
     private void writeNewPost(String userId, String username, String title, String body) {
-        // Create new post at /user-posts/$userid/$postid and at
-        // /posts/$postid simultaneously
+        // 새로은 게시글을  /user-posts/$userid/$postid 여기에 작성을 하고
+        // /posts/$postid simultaneously 여기에도 동시에 작성하게.
         String key = mDatabase.child("posts").push().getKey();
         Post post = new Post(userId, username, title, body);
         Map<String, Object> postValues = post.toMap();
