@@ -37,4 +37,12 @@
 <img width="347" alt="commented" src="https://user-images.githubusercontent.com/39542989/82025502-66c67b80-96cc-11ea-8778-440680ba263f.png">
 
 ## 좋아요
+내가 특정 게시물에 좋아요를 누르기 전 화면
+
+<img width="332" alt="notstarred" src="https://user-images.githubusercontent.com/39542989/82025520-6c23c600-96cc-11ea-8f4e-36171cc5811f.png">
+
+해당 게시물에 내가 좋아요를 누른 이후의 화면
+
+<img width="342" alt="starred" src="https://user-images.githubusercontent.com/39542989/82025526-6cbc5c80-96cc-11ea-9334-53e3a7d12073.png">
+
 
