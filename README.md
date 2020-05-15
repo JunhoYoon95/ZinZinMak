@@ -46,3 +46,8 @@
 <img width="342" alt="starred" src="https://user-images.githubusercontent.com/39542989/82025526-6cbc5c80-96cc-11ea-9334-53e3a7d12073.png">
 
 
+## 구현 파일 구조
+### Java file
+<img width="337" alt="javafile" src="https://user-images.githubusercontent.com/39542989/82025507-68903f00-96cc-11ea-9157-efd5b0a8014a.png">
+### Layout file
+<img width="335" alt="layout" src="https://user-images.githubusercontent.com/39542989/82025509-6928d580-96cc-11ea-95a4-520e414ff8f0.png">
